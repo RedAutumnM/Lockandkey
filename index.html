@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Protected</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #d38312, #a83279);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      width: 80%;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-weight: bold;
+      color: white;
+      background-color: #8e44ad;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🔒 Protected Page</h1>
+    <p>Enter the secret password to continue:</p>
+    <input type="password" id="passwordInput" placeholder="Enter password..." />
+    <br />
+    <button onclick="checkPassword()">Submit</button>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const message = document.getElementById("message");
+
+      if (input === "racecar bed") {
+        message.textContent = "✅ good job!";
+        message.style.color = "#b5ead7";
+      } else {
+        message.textContent = "❌ incorrect password.";
+        message.style.color = "#ffb3ba";
+      }
+    }
+  </script>
+</body>
+</html>
