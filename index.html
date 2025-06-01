@@ -1,74 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Password Protected</title>
+  <meta charset="UTF-8" />
+  <title>🔐 Cute Secret Vault 🔐</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #d38312, #a83279);
-      color: white;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-image: url('https://i.pinimg.com/originals/cf/f3/3e/cff33e7a58c8e8a531cf5bc7aaf62b5e.jpg'); /* Hello Kitty vault */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
       text-align: center;
-      padding: 80px 20px;
+      color: #fff;
+      padding: 50px;
     }
 
     .container {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 240, 250, 0.9);
       padding: 30px;
-      border-radius: 15px;
-      max-width: 400px;
-      margin: auto;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border-radius: 20px;
+      border: 3px dashed pink;
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 20px #f0a;
     }
 
     input[type="password"] {
       padding: 10px;
-      width: 80%;
-      margin: 10px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-weight: bold;
-      color: white;
-      background-color: #8e44ad;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+      font-size: 1.2em;
+      border: 2px solid pink;
+      border-radius: 10px;
       margin-top: 10px;
     }
 
-    #message {
+    button {
+      background-color: #ffb6c1;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+
+    #result, #hexStuff {
       margin-top: 20px;
-      font-size: 20px;
-      font-weight: bold;
+    }
+
+    #racecarImg {
+      max-width: 100%;
+      border-radius: 20px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-size: 0.75em;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .link-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #d364ba;
+      padding: 8px 16px;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>🔒 Protected Page</h1>
-    <p>Enter the secret password to continue:</p>
+    <h1>🔐 Welcome to the Cute Vault 🔐</h1>
+    <p>Enter the secret password to unlock the surprise!</p>
     <input type="password" id="passwordInput" placeholder="Enter password..." />
     <br />
     <button onclick="checkPassword()">Submit</button>
-    <div id="message"></div>
+
+    <div id="result"></div>
+
+    <img id="racecarImg" src="https://i.pinimg.com/originals/7b/4f/88/7b4f882d5a3bd6a0db396c3f3f12c27e.jpg" alt="Racecar bed" />
+
+    <div id="hexStuff" style="display: none;">
+      <h3>🔑 Secret Hex Code:</h3>
+      <textarea readonly id="hexCode">f5pdd6izoe5n1e8846k5f40v1vus92jyu6kyebw7ve8lvwx4dy6zokvvjfl46mw3tbk7cgnfftkhqdtdb52kw68j4h6mnpr9dokyqxdku1z5znjnpswc0x53awg9qs90k5obq8firxp5jt7lzwd6lnjln8676o8p8ou1d6e1r36ebhcqjpsmebsivdg2wki61hecjz79rdzshsn8eeqm4vmjswwx1ghimsxpbynh3wer5pq9yel757dw4sw6h8k7creep2pg3hlrvnd00ams4odkrjp6tq1opgtwnc8twlo59mvly7bmkjevam1do0qd2xvld7en09rnpbr8gnb24e8g3i71ylb0vgb45qtpfclrem505tcttcnb0l26bir7cbmwye8y619gi0hqjq505ltpr0zryx09d5r2ipymd4053wf6l409syd6103if7zrgrrzue5c1dj5rzhxsmwdccvoyyedoj2qpgr0jqegpnlnsds03klizytpcyixd3g6pm50sunxpx1kenvkg6k259w2myxlvvo9m38obs192t1a2zu8xwajvkdc6xtmrngb1r9j4qdqlvzsqnycn61wmsnzncqxina3t8dl2abz7sctkinm6zqmonke77piuh940wwpi1sjzbiersyr8aihd0ixmvpwaixzgi24z4idcl99qlco4xk6sctokd00376cyanecfh8k0pd2qurcvurz9ml933wub5g190mn37ahh4gcdtjiqmh6m4mu4e24l732b3v20uhnda3am4fqyonw0dcdkb98qv5t0thy2k9ls84fuk7zmv7wkso3m4gzjr6vgg9ub6ulbvju1nk0fuq8agka2d4pxehvnvc1n5oetrg79crjmcu85vvjon2urexq6pe2wgwh02xsxo3q0pcshbckabndsdsnshqzgolspmb0il4k9uwotnifa4849pkkylii5o2pxsyncoxadzlk9ughxk5wesdta0xt3znsciz2di7ho8dircshgttt8mp9v93gyykukial3al37awhmj45s0d35zmh9y0qitq5mdnvvdv2zj05gwvrx8bjdp48kkxx0brw7gvep74ihchxhcuyrauz0w1vrzycw1hmobrl8mculgvxnvl8a1hepvl673sqa0wb9r6i9wzmbtl2m21p7dibzv3rib0pn95jvr81jrz0xoybxjnj5fr8bh9ztanmz3fbhx56png0a5dyb4rzv8so5h30t09ccp2wmqsgiu7mst8tnowxk5qvmishlt894x3qulcls9q4tlxqwn3jh27fnho2x9yyfs5ap610ec8lnyp49t2qhdbwb1m5fb4n8djqqkouhb7511zjrd2ykv0png5omdvqalaojdx226h6ogddtctjugp4ccwb32wzjx9ty0hrt7jy5vrmnz411e94liq4gar59i3yt2l1iwmcj2elhrvrxcm8vukxed4486s2t1dq11l7zxwo342hrg8zs8xh25jgo1t55jodwaqszuar9xrsionnlq8o423rpy04tj1erl8c8k8jnkj2r7map78thabdk66v8dnqnd55zmzpqsu06459946iurkwb5jhew3rfiyjbnxo0je4bm7p38z0ey5mr98ezittdoj8i6xwn6u23am2b9t78q8e13ltr0su5t1zh7xh31sb3kygbwfy3rm3weuqfz8um5va85vhrgoiy4n0duvteh65khzcca27y8vcn5o6my5u4bnutatnnlgepejc1dutcsotu8c4luxjlcvqjs76z1rteeqh5f16kk7doc7l3nro0efx377o5ubnsg9ek9u463as6w8ocnt1zjhdye31r1yix7y89yue7ffp9jolwra3gom5poj8cdar1oywqvlrs0m0q5c0d1620z5nh4qystfvzgi6d1ajeyuhs2u58fhrthlj7kjy95nr27miljqlkz5nqiz65oyk8j0c2jq4i7bkhsrvj2c2wcsquw0pvrj8ly1q6jua3fu2ingmljv3yckr66mdwesb12bo3gza70oooq1iri0tv11dzq1usx4pba6r5qab6sxw80spj06mxhowvuk8t81ttkxxk14yzdqui5bq3qvsncwr6fguqjiewm0t55z7crg915jlie8nnxp9gzq8s3poct8tyi3yg1x3jswzo291tcxwdgq2z42gv6ti8vkbamhjmzgycysysoxulyffp2j08igt5dbt4mzo5auqrr5j7fewcvwu9gairuib23ys94cud6es5eufuaxurq9xo8a1v9wuy2sglrj7oaxrsvhwmonkzcmupbv5cbsaqx7hwuhs2fkhd205pj8mhcqr2t0vtcvlt7p4ro55w5kpma0xdrterjzpzui2io4mze378mdwrod40ffjqucxrm7ocibxfb184stquq28v00v3uxiidsp38xzxrpd3zkzh95aeu4hgdxwrqnxrp0h7d92t7696fav7mywslqadb0qwehjr6egl5dvqsuwcqkct5pek1xtltxxq89yalzbw2qa0fjzoyau3hvdq7fiynqkl3be7xj310yjd6xvps2hp1wj991d037py62xmxolrdfzngtywrisnwozgvywj2oy3edwicrz5jr0vh5unvrwr6rcwc69pum0yjsmn61df53f70wv34iivad60spat84huniedpk8pdbsu235pl5eox489gyv2rt8vtyo24nps206b1r17susg8q7mp8jkqxyc7zcqakclximxrslv9tclb3b15w1a9j8bn9kfyq0v9msp6wpippl43i7thsejnkvf9h41ms1p9vggi4n6l43grl9atx5dgdz99qvkwyyo6kuunv9s7czupfw6if20b0phkihm0cvug4rmkqh2ptgn8ltyboezvjb4zz10zwxrmhkkd42mymgfvyb18un80fo08zkbzuk344tlomj8afigqee91u56m9hvzdta4x9yi0vgyokoazzmgzke2l6lwgyub2xq1atn5isxsenowl87nvyvx74he16elve9wddneu8b9t1qfvypjea16op6xmy70ne51piee3xly5zmz7tv80flvrwwmufp7ttgauaq6u5ud1tlhawgitnjipjg0an63j6kd0ghef8d3vi358gajs7na0b4p64jfehvrfq5ajejal390xn2iuw0dq90vmwd7l0wk2mhugcanez4i3t7j0go27y6mb2d7hbwp3ly1an</textarea>
+      <br />
+      <a href="https://libraryofbabel.info" target="_blank" class="link-button">🔎 Visit Library of Babel</a>
+    </div>
   </div>
 
   <script>
     function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      const message = document.getElementById("message");
+      const input = document.getElementById("passwordInput").value.trim().toLowerCase();
+      const result = document.getElementById("result");
+      const img = document.getElementById("racecarImg");
+      const hexStuff = document.getElementById("hexStuff");
 
       if (input === "racecar bed") {
-        message.textContent = "✅ good job!";
-        message.style.color = "#b5ead7";
+        result.innerHTML = "<h2>🎉 Good job! 🎉</h2>";
+        img.style.display = "block";
+        hexStuff.style.display = "block";
       } else {
-        message.textContent = "❌ incorrect password.";
-        message.style.color = "#ffb3ba";
+        result.innerHTML = "<p>❌ Nope! Try again.</p>";
+        img.style.display = "none";
+        hexStuff.style.display = "none";
       }
     }
   </script>
